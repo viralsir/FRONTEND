@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jsdemo3</title>
+  <script>
+     var count=0;
+        function counter()
+        {
+            //document.getElementById("output").innerHTML="count :" + count;
+            document.getElementById("output").innerHTML= `count  is   ${count}`;
+            count=count+1;
+
+        }
+  </script>
+
+</head>
+<body>
+ <h1 id="output"> </h1>
+<input type="button" value="Click me" onclick="counter()">
+</body>
+</html>

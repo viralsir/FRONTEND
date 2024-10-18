@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jsdemo5</title>
+
+  <script>
+    var count=0;
+
+
+    document.addEventListener("DOMContentLoaded",function() {
+
+      document.getElementById("clickbtn").onclick = ()=>{
+        document.getElementById("output").innerHTML=count;
+        count++;
+      }
+
+
+    });
+  </script>
+
+</head>
+<body>
+<h1 id="output"></h1>
+<input type="button" value="click" id="clickbtn" >
+
+
+
+
+</body>
+</html>
