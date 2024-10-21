@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jsdemo 10 </title>
+  <script>
+          //  if
+          //   if (condition)
+          // {
+          //     true part;
+          //     statment;
+          // }
+          // else
+          // {
+          //    false part;
+          //    statement;
+          //
+          // }
+          //   i)  if else
+          //     ii) else if
+          //   iii) nested if
+          //   Relation operator
+          //  operator           symbol
+          // grater than           >
+          // less than            <
+          // grater than or
+          // equal to                  >=
+          // less than or
+          // equal to              <=
+          //  equal to              ==
+          //  not equal to         !=
+          //
+          //  Logical operator
+          // operator       symbol
+          // and             &&
+          //  or             ||
+          // not             !
+
+
+           document.addEventListener("DOMContentLoaded",function(){
+             document.getElementById("maxbtn").onclick=function(){
+               let no1= parseInt(document.getElementById("no1").value);
+               let no2= parseInt(document.getElementById("no2").value);
+               let no3= parseInt(document.getElementById("no3").value);
+
+                if(no1>0 && no2>0 && no3>0 )
+                {
+
+                      if(no1>no2 && no1>no3)
+                      {
+                        document.getElementById("answer").innerHTML=`${no1} is a maximum no`;
+                      }
+                      else if(no2>no1 && no2>no3)
+                      {
+                        document.getElementById("answer").innerHTML=`${no2} is a maximum no`;
+                      }
+                      else{
+                        document.getElementById("answer").innerHTML=`${no3} is a maximum no`;
+                      }
+
+                }
+                else
+                {
+                  document.getElementById("answer").innerHTML=`Invalid input `;
+                }
+
+
+
+             }
+           })
+  </script>
+
+</head>
+
+
+<body>
+
+<form >
+    No1 : <input type="text" name="no1" id="no1"><br>
+    No2 : <input type="text" name="no2" id="no2"><br>
+    No3 : <input type="text" name="no3" id="no3"><br></br>
+
+  <input type="button" value="Max" id="maxbtn" >
+  <input type="reset" value="clear"></br>
+  <h1 id="answer">
+
+  </h1>
+</form>
+
+
+</body>
+</html>
