@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jsdemo12</title>
+  <script>
+
+           // circular control structure  :
+           //     loop :
+           //          1)while loop
+           //                     syntax :
+           //                         initialization of variable
+           //                        while(condition)
+           //                        {
+           //                           true part;
+           //                           increment/decrement of variable
+           //                        }
+           //          2)do while loop
+           //          3) for loop
+           //
+    document.addEventListener("DOMContentLoaded",function(){
+
+       document.getElementById("tablebtn").onclick=function() {
+
+         document.getElementById("output").innerHTML = "";
+         let no1 = document.getElementById("no1").value;
+         let no2 = document.getElementById("no2").value;
+
+
+         // while(no1<=no2)
+         // {
+         //       let start=1;
+         //       while(start<=10){
+         //         document.getElementById("output").innerHTML += `<br/> ${no1} * ${start} = ${no1*start}`;
+         //         start++;
+         //       }
+         //        document.getElementById("output").innerHTML +="<br/> ============================= <br/>";
+         //       no1++;
+         // }
+
+         /*do
+         {
+               let start=1;
+               do
+               {
+                         document.getElementById("output").innerHTML += `<br/> ${no1} * ${start} = ${no1*start}`;
+                         start++;
+
+               }while(start <= 10);
+
+               no1++;
+         }while(no1<=no2)
+*/
+         for (; no1 <= no2; no1++) {
+           for (let start = 1; start <= 10; start++) {
+             document.getElementById("output").innerHTML += `<br/> ${no1} * ${start} = ${no1 * start}`;
+           }
+
+         }
+       }
+    });
+
+
+  </script>
+</head>
+<body>
+<form>
+   Start : <input type="text" name="no1" id="no1"><br>
+   End   : <input type="text" name="no1" id="no2"><br>
+
+  <input type="button" value="Table" id="tablebtn"> <input type="reset" value="clear">
+
+</br>
+ <h1 id="output">
+
+ </h1>
+
+</form>
+
+</body>
+</html>
