@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jsdemo14</title>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+
+        document.getElementById("redbtn").onclick = function() {
+           document.getElementById("output").style.color = "red";
+        }
+
+        document.getElementById("greenbtn").onclick = function() {
+          document.getElementById("output").style.color = "green";
+        }
+
+        document.getElementById("bluebtn").onclick = function() {
+          document.getElementById("output").style.color = "blue";
+        }
+
+      })
+  </script>
+</head>
+<body>
+    <h1 id="output"> Hello </h1>
+    <input type="button" value="red" id="redbtn">
+    <input type="button" value="green" id="greenbtn">
+    <input type="button" value="blue" id="bluebtn">
+
+</body>
+</html>
