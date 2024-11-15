@@ -9,26 +9,26 @@
        document.getElementById('clickbtn').onclick = function() {
 
 
-         fetch('https://jsonplaceholder.typicode.com/todos')
+         fetch('http://localhost:9090/topics')
            .then(response => response.json())
+
            .then(json =>{
                  document.getElementById('output').innerHTML="";
              for (const jsonElement of json) {
                  let tr=document.createElement('tr');
-                 let usertd=document.createElement('td');
                  let idtd=document.createElement('td');
-                 let titletd=document.createElement('td');
-                 let completedtd=document.createElement('td');
+                 let nametd=document.createElement('td');
+                 let descriptiontd=document.createElement('td');
 
-                  usertd.innerHTML=jsonElement.userId;
+
                   idtd.innerHTML=jsonElement.id;
-                  titletd.innerHTML=jsonElement.title;
-                  completedtd.innerHTML=jsonElement.completed;
+                  nametd.innerHTML=jsonElement.name;
+                  descriptiontd.innerHTML=jsonElement.description;
 
-                  tr.appendChild(usertd);
+
                   tr.appendChild(idtd);
-                  tr.appendChild(titletd);
-                  tr.appendChild(completedtd);
+                  tr.appendChild(nametd);
+                  tr.appendChild(descriptiontd);
 
                  document.getElementById('output').appendChild(tr);
 
@@ -57,7 +57,7 @@
 <table class="table table-primary">
   <thead>
      <tr>
-       <th>User</th> <th>Id</th><th>Title</th><th>Completed</th>
+       <th>Id</th><th>Name</th><th>Description</th>
      </tr>
   </thead>
   <tbody id="output">
